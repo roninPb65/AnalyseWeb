@@ -30,7 +30,7 @@ echo.
 echo ✅ Setup complete!
 echo.
 echo 🌐 Starting Flask server...
-echo    Backend: http://localhost:5000
+echo    Backend: https://analyseweb.onrender.com
 echo.
 echo 📖 To use the app:
 echo    1. Open index.html in your browser
@@ -40,7 +40,7 @@ echo Press Ctrl+C to stop the server
 echo.
 
 REM Start Flask server and open browser
-start http://localhost:5000
+start https://analyseweb.onrender.com
 start index.html
 python app.py
 
