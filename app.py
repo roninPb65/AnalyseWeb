@@ -11,6 +11,7 @@ import json
 import base64
 from io import BytesIO
 from pathlib import Path
+from flask import Flask, render_template
 import traceback
 
 warnings.filterwarnings("ignore")
@@ -316,6 +317,11 @@ class DataAnalyzer:
 current_analyzer = None
 
 
+@app.route("/")
+def home():
+    return render_template("index.html")
+    
+
 @app.route("/api/upload", methods=["POST"])
 def upload_file():
     """Handle file upload"""
@@ -421,5 +427,7 @@ def download_results():
         return jsonify({"error": str(e)}), 500
 
 
+
+
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run()
