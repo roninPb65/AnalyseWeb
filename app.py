@@ -427,6 +427,9 @@ def download_results():
 
 
 
-
 if __name__ == "__main__":
-    app.run()
+    # Use the port assigned by the platform (e.g., Render/Heroku) or default to 5000
+    port = int(os.environ.get("PORT", 5000))
+    
+    # host="0.0.0.0" is critical to allow external connections
+    app.run(host="0.0.0.0", port=port)
