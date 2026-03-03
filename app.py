@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, send_file
+from flask import Flask, request, jsonify, send_file, render_template
 from flask_cors import CORS
 import pandas as pd
 import numpy as np
@@ -11,7 +11,6 @@ import json
 import base64
 from io import BytesIO
 from pathlib import Path
-from flask import Flask, render_template
 import traceback
 
 warnings.filterwarnings("ignore")
