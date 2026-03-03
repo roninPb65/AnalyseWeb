@@ -764,7 +764,7 @@
                                             {preview.head.slice(0, 5).map((row, idx) => (
                                                 <tr key={idx}>
                                                     {preview.columns.map(col => (
-                                                        <td key={col}>{String(row[col] ?? '')}</td>
+                                                        <td key={col}>{String(row[col] || '')}</td>
                                                     ))}
                                                 </tr>
                                             ))}
